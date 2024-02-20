@@ -1,37 +1,51 @@
 package org.automation.element_repository;
 
 import org.automation.base.Base_Page;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-/***
- * 
- * @author Sumanth
- *
- */
 public class Home_Page extends Base_Page {
 
 	public Home_Page(WebDriver driver) {
 		super(driver);
+		
 	}
-
-	//================Web elements or Property================
-	@FindBy(linkText="Log out") 
-	private WebElement logoutButton;
 	
-	//================Getters or Public services================
-	public WebElement getLogoutButton() {
-		return logoutButton;
+	@FindBy(partialLinkText = "Update Profile")
+	private WebElement updateprofile;
+	
+	@FindBy(partialLinkText = "View Appointment History")
+	private WebElement viewappointmenthistory;
+	
+	@FindBy(partialLinkText = "Book Appointment")
+	private WebElement bookappointment;
+
+	@FindBy(partialLinkText = "Log Out")
+	private WebElement logoutlink;
+
+
+	public WebElement getUpdateprofile() {
+		return updateprofile;
 	}
 
-	public WebElement getCustomerProfileLink(String emailId) {
-		return driver.findElement(By.xpath("//a[@class='account' and contains(text(),'"+ emailId +"')]"));
+	public WebElement getLogoutlink() {
+		return logoutlink;
 	}
 
-	//================Business Logic or Action methods or Behavior================
+	public WebElement getViewappointmenthistory() {
+		return viewappointmenthistory;
+	}
+
+	public WebElement getBookappointment() {
+		return bookappointment;
+	}
+
 	public void logout() {
-		logoutButton.click();
+		getLogoutlink().click();	
+		
+		
+		
 	}
+
 }

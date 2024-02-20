@@ -86,18 +86,19 @@ public abstract class Base_Test extends InitObjects {
 	 * this function performs logout action
 	 * @throws IOException 
 	 */
-	@AfterMethod(alwaysRun = true)
-	public void logoutOfApplication() throws IOException {
-		homePage.logout();
-	}
+//	
+//	@AfterMethod(alwaysRun = true)
+//	public void logoutOfApplication() throws IOException {
+//		homePage.logout();
+//	}
 
 	/**
 	 * this function stops the driver instance
 	 */
-	@AfterClass(alwaysRun = true)
-	public void browserTearDown() {
-		driver.quit();
-	}
+//	@AfterClass(alwaysRun = true)
+//	public void browserTearDown() {
+//		driver.quit();
+//	}
 
 // *****************************************************************************
 // ==============================Custom Exceptions==============================

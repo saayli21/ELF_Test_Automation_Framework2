@@ -3,11 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testDataSample.SampleDataProvider">
+      <class name="testCaseSample.HMS_TC_001">
         <methods>
-          <include name="registerUser"/>
+          <include name="browserSetUp"/>
+          <include name="loginToApplication"/>
+          <include name="BookAppointment"/>
         </methods>
-      </class> <!-- testDataSample.SampleDataProvider -->
+      </class> <!-- testCaseSample.HMS_TC_001 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
